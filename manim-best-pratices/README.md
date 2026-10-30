@@ -17,6 +17,11 @@ Antes de gerar qualquer cena ou código Manim, você DEVE consultar e seguir est
 - references/best_practices.md (paleta de cores, tipografia e performance)
 - references/syntax.md (sintaxe recomendada de Mobjects e animações)
 - examples/ (estruturas e templates executáveis)
+
+Se a tarefa envolver:
+- dissectar/animar um ALGORITMO com fidelidade → carregue a skill manim-algoritmo
+- design visual de cenas de grafo/algoritmo → carregue a skill manim-visual
+- renderização/entrega de vídeos (480p → 1080p, hashes, verificação) → carregue a skill manim-pipeline
 ```
 
 ---
@@ -34,6 +39,16 @@ Antes de gerar qualquer cena ou código Manim, você DEVE consultar e seguir est
 └── examples/                         # Exemplos Python executáveis
     ├── basic_scene.py                # Exemplo essencial de transformações LaTeX e updaters
     └── split_screen_layout.py        # Template de tela dividida em cards e painéis independentes
+```
+
+### Mini-Skills Complementares (same level, global)
+
+```
+skills/
+├── manim-best-pratices/              # Esta skill (guarda-chuva: fundamentos do ManimCE)
+├── manim-algoritmo/SKILL.md          # Animação fiel de algoritmos: recorder/trace, linha a linha, testes dourados
+├── manim-visual/SKILL.md             # Linguagem visual: cores unívocas, simbologia, layout código+grafo+estado
+└── manim-pipeline/SKILL.md           # Fluxo de render: portão 480p→1080p, hashes, fila serial, armadilhas
 ```
 
 ---

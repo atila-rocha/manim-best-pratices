@@ -15,6 +15,16 @@ This skill provides expert guidance for designing and implementing mathematicall
 - **Spatial Budgeting & Isolation**: Explicitly partition screen real estate (`frame_width=14.22`, `frame_height=8.0`). Delimit text and diagrams with backdrop cards (`RoundedRectangle`) and never let elements encroach on adjacent quadrants.
 - **Visual Clarity & Continuity**: Prefer `ReplacementTransform` or `TransformMatchingTex` over standard `Transform` to prevent ghost objects and overlapping geometries. Use `.animate` for fluid property transitions.
 - **Iterative Drafting**: Always test animations in low quality (`-pql`) first to maintain high development velocity before final high-resolution rendering (`-pqh`).
+- **State Must Come From Truth**: When animating an algorithm (graph, sort, search), never hand-craft the state shown on screen. Capture it from a real run of the algorithm (recorder/tracer) so that every frame matches actual execution semantics.
+- **Gate Final Renders**: Never produce the final high-resolution video before the low-resolution (480p) version has been validated with the author. Keep old code/videos untouched; ship everything new with a `_new` suffix and a separate media folder.
+
+## Suite Skills (não repita o que já existe)
+
+This skill covers core ManimCE fundamentals. For specialized concerns, load the dedicated skill — they are small and focused:
+
+- **`manim-algoritmo`**: dissect and animate an algorithm faithfully (recorder → steps, line-by-line didactic mode, golden tests, step-index comparison).
+- **`manim-visual`**: unambiguous color/symbol language, graph+code+state layout, stable state panels.
+- **`manim-pipeline`**: render lifecycle (480p validation gate → 1080p60), media hygiene with hash snapshots, serial background queueing, environment pitfalls.
 
 ## Essential Workflow
 
